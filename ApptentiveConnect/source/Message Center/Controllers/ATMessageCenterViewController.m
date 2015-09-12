@@ -118,8 +118,9 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 	}
 	
 	[self.interaction engage:ATInteractionMessageCenterEventLabelLaunch fromViewController:self];
-	
-	self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+
+#warning commenting the below line from overwriting the nav bar tint color 
+	//self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 	[self.navigationController.toolbar addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(compose:)]];
 	
 	self.navigationItem.rightBarButtonItem.title = ATLocalizedString(@"Close", @"Button that closes Message Center.");
